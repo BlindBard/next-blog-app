@@ -5,9 +5,9 @@ async function getData(id: string) {
     next: {
       revalidate: 60
     }
-  })
+  });
 
-  return response.json()
+  return response.json();
 }
 
 type Props = {
@@ -17,20 +17,20 @@ type Props = {
 }
 
 export async function generateMetadata({ params: { id } }: Props): Promise<Metadata> {
-  const post = await getData(id)
+  const post = await getData(id);
 
   return {
     title: post.title
-  }
+  };
 }
 
-export default async function Post ({ params: { id } }: Props) {
-  const post = await getData(id)
+export default async function Post({ params: { id } }: Props) {
+  const post = await getData(id);
 
   return (
     <>
       <h1>{post.title}</h1>
       <p>{post.body}</p>
     </>
-    )
+  );
 }

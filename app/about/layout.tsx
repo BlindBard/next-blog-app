@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import Link from "next/link";
 
-export default function AboutLayout({children}:{children: ReactNode}) {
+export default function AboutLayout({ children }: { children: ReactNode }) {
   return (
     <div>
       <h1>About us</h1>
@@ -15,5 +15,5 @@ export default function AboutLayout({children}:{children: ReactNode}) {
       </ul>
       {children}
     </div>
-  )
+  );
 }
